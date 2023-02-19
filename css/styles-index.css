@@ -616,6 +616,7 @@ display: flex;
     position: relative;
     overflow: hidden;
 }
+
 .portfolio-thumb::before {
     display: inline-block;
     content: "";
@@ -631,7 +632,10 @@ display: flex;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.porfolio-list:hover .portfolio-thumb::before {
+.porfolio-link:hover
+.portfolio-thumb::before,
+.porfolio-link:focus
+.portfolio-thumb::before {
     transform: translateY(0);
 }
 
