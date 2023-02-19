@@ -285,6 +285,26 @@ display: flex;
     justify-content: center;
 }
 
+.subject-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--color-hover);
+    width: 100%;
+    height: 70px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .work-item {
     display: flex;
     flex-wrap: wrap;
@@ -294,6 +314,7 @@ display: flex;
 .work-list {
     flex-basis: calc((100% - 90px) / 3);
     margin-left: 30px;
+    position: relative;
 }
 
 /*===Team===*/
@@ -477,6 +498,7 @@ display: flex;
     font-style: normal;
     letter-spacing: 0.03em;
     margin-top: 20px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -588,6 +610,29 @@ display: flex;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-thumb::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);;
+    cursor: pointer;
+    
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.porfolio-list:hover .portfolio-thumb::before {
+    transform: translateY(0);
 }
 
 .portfolio-item {
